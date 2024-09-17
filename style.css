@@ -196,7 +196,10 @@ span {
   border-radius: 50%;
   border: 10px solid #464646;
   overflow: hidden;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
+  display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .spinner-inner {
@@ -206,14 +209,15 @@ span {
   border-radius: 50%;
   transform: rotate(0deg);
   transition: transform 5s ease-out;
+  clip-path: circle(50%);
 }
 
 .section {
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   background: transparent;
-  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(50% 50%, 100% 0, 100% 100%);
 }
 
 .section1 { background: #ff7cd8; transform: rotate(0deg); }
