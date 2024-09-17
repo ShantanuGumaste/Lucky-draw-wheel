@@ -17,7 +17,7 @@ function shuffle(array) {
 
 let isSpinning = false;
 
-function spin() {
+function spinNew() {
   if (isSpinning) return; // Prevent multiple spins
   isSpinning = true;
 
@@ -49,7 +49,7 @@ function spin() {
   }, 5000);
 }
 
-function spinOld() {
+function spin() {
   document.addEventListener('click', () => {
   // Play the sound
 //   wheel.play();
