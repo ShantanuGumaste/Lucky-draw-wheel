@@ -15,7 +15,41 @@ function shuffle(array) {
   return array;
 }
 
+let isSpinning = false;
+
 function spin() {
+  if (isSpinning) return; // Prevent multiple spins
+  isSpinning = true;
+
+  const box = document.querySelector(".box");
+  const arrow_div = document.getElementById("arrow_div");
+  const outcomes = [
+    { prize: "₹ 5", angle: 0 },
+    { prize: "₹ 10", angle: 60 },
+    { prize: "₹ 7", angle: 120 },
+    { prize: "₹ 9", angle: 180 },
+    { prize: "₹ 8", angle: 240 },
+    { prize: "₹ 2", angle: 300 }
+  ];
+
+  // Randomly select a prize
+  const selectedOutcome = outcomes[Math.floor(Math.random() * outcomes.length)];
+  const spinAngle = 3600 + selectedOutcome.angle; // Spin at least 10 full rotations
+
+  // Spin the wheel
+  box.style.transition = "transform 5s ease-out";
+  box.style.transform = `rotate(${spinAngle}deg)`;
+
+  // Reset spin state after spin
+  setTimeout(() => {
+    isSpinning = false;
+    document.getElementById("card-text").innerHTML =
+      "You have won a reward of " + selectedOutcome.prize;
+    document.getElementById("reward_card").style.display = "flex";
+  }, 5000);
+}
+
+function spinOld() {
   document.addEventListener('click', () => {
   // Play the sound
 //   wheel.play();

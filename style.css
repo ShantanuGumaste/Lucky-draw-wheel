@@ -29,7 +29,7 @@ body {
   border: 10px solid #464646;
   overflow: hidden;
   /* transition: all ease-in-out 5s; */
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 span {
@@ -187,6 +187,30 @@ span {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3c5bd', endColorstr='#c72200',GradientType=1 ); /* IE6-9 */
 }
 
+/* new css */
+
+.box-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(0deg);
+}
+
+.box-inner span {
+  display: block;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background: transparent;
+}
+
+.section1 { transform: rotate(0deg) skewY(-30deg); background: #ff7cd8; }
+.section2 { transform: rotate(60deg) skewY(-30deg); background: #d0e4f7; }
+.section3 { transform: rotate(120deg) skewY(-30deg); background: #f6290c; }
+.section4 { transform: rotate(180deg) skewY(-30deg); background: #fceabb; }
+.section5 { transform: rotate(240deg) skewY(-30deg); background: #f3c5bd; }
+.section6 { transform: rotate(300deg) skewY(-30deg); background: #f5b122; }
+
 .box2 .span3 {
   background-color: #f43d51;
 }
@@ -200,6 +224,7 @@ span {
 .font {
   color: white;
   font-size: 25px;
+  text-align: center;
 }
 
 .heading {
