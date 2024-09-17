@@ -35,8 +35,8 @@ function spin() {
 
   // Randomly select a prize
   const selectedOutcome = outcomes.filter((outcome)=>outcome.num == reward_input.value);
-  const spinAngle = 3600 + selectedOutcome.angle; // Spin at least 10 full rotations
-  console.log("selectedOutcome",selectedOutcome)
+  const spinAngle = 3600 + selectedOutcome[0].angle; // Spin at least 10 full rotations
+  console.log("selectedOutcome",selectedOutcome[0])
   console.log("spinAngle",spinAngle)
 
       // Spin the wheel
@@ -46,7 +46,7 @@ function spin() {
   setTimeout(() => {
     isSpinning = false;
     document.getElementById("card-text").innerHTML =
-      "You have won a reward of " + selectedOutcome.prize;
+      "You have won a reward of " + selectedOutcome[0].prize;
     document.getElementById("reward_card").style.display = "flex";
   }, 5000);
 }
