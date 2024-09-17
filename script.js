@@ -27,14 +27,16 @@ function spin() {
     { prize: "₹ 5", angle: 0 },
     { prize: "₹ 10", angle: 60 },
     { prize: "₹ 7", angle: 120 },
-    { prize: "₹ 9", angle: 180 },
-    { prize: "₹ 8", angle: 240 },
+    { prize: "₹ 8", angle: 180 },
+    { prize: "₹ 9", angle: 240 },
     { prize: "₹ 2", angle: 300 }
   ];
 
   // Randomly select a prize
   const selectedOutcome = outcomes[Math.floor(Math.random() * outcomes.length)];
   const spinAngle = 3600 + selectedOutcome.angle; // Spin at least 10 full rotations
+  console.log("selectedOutcome",selectedOutcome)
+  console.log("spinAngle",spinAngle)
 
       // Spin the wheel
     spinner.style.transform = `rotate(${spinAngle}deg)`
