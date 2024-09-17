@@ -229,32 +229,32 @@ span {
 
 .section1 {
   background: #ff7cd8;
-  transform: rotate(0deg);
+  transform: rotate(90deg);
 }
 
 .section2 {
   background: #d0e4f7;
-  transform: rotate(60deg);
+  transform: rotate(150deg);
 }
 
 .section3 {
   background: #f6290c;
-  transform: rotate(120deg);
+  transform: rotate(210deg);
 }
 
 .section4 {
   background: #fceabb;
-  transform: rotate(180deg);
+  transform: rotate(270deg);
 }
 
 .section5 {
   background: #f3c5bd;
-  transform: rotate(240deg);
+  transform: rotate(330deg);
 }
 
 .section6 {
   background: #f5b122;
-  transform: rotate(300deg);
+  transform: rotate(390deg);
 }
 
 .box2 .span3 {

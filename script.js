@@ -22,18 +22,19 @@ function spin() {
   isSpinning = true;
 
   const spinner = document.querySelector(".spinner-inner");
+  const reward_input = document.querySelector("#reward_input");
 
   const outcomes = [
-    { prize: "₹ 5", angle: 0 },
-    { prize: "₹ 10", angle: 60 },
-    { prize: "₹ 7", angle: 120 },
-    { prize: "₹ 8", angle: 180 },
-    { prize: "₹ 9", angle: 240 },
-    { prize: "₹ 2", angle: 300 }
+    { prize: "₹ 10", angle: 0, num:10 },
+    { prize: "₹ 5", angle: 60, num:5 },
+    { prize: "₹ 2", angle: 120, num:2 },
+    { prize: "₹ 8", angle: 180, num:8 },
+    { prize: "₹ 9", angle: 240, num:9 },
+    { prize: "₹ 7", angle: 300, num:7 }
   ];
 
   // Randomly select a prize
-  const selectedOutcome = outcomes[Math.floor(Math.random() * outcomes.length)];
+  const selectedOutcome = outcomes.num == reward_input.value;
   const spinAngle = 3600 + selectedOutcome.angle; // Spin at least 10 full rotations
   console.log("selectedOutcome",selectedOutcome)
   console.log("spinAngle",spinAngle)
