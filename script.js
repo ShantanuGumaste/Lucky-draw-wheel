@@ -34,7 +34,7 @@ function spin() {
   ];
 
   // Randomly select a prize
-  const selectedOutcome = outcomes.some((outcome)=>outcome.num == reward_input.value);
+  const selectedOutcome = outcomes.filter((outcome)=>outcome.num == reward_input.value);
   const spinAngle = 3600 + selectedOutcome.angle; // Spin at least 10 full rotations
   console.log("selectedOutcome",selectedOutcome)
   console.log("spinAngle",spinAngle)
