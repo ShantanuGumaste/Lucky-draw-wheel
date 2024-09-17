@@ -61,7 +61,7 @@ function spin() {
   let SelectedItemColor = "";
 
   let MagicRoaster = shuffle([1890, 2250, 2610]);
-  let Sepeda = shuffle([1850, 2210, 2570]); //Kemungkinan : 100%
+  let Sepeda = shuffle([1850, 2210, 2570]);
   let RiceCooker = shuffle([1810, 2170, 2530]);
   let LunchBox = shuffle([1770, 2130, 2490]);
   let Sanken = shuffle([1750, 2110, 2470]);

@@ -40,7 +40,7 @@ span {
 }
 
 .span1 {
-  clip-path: polygon(0 17%, 0 50%, 50% 50%);
+  clip-path: polygon(0 17%, 0 100%, 50% 50%);
   /* background-color: #796eb2; */
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff7cd8+0,fba6e1+31,f9b8f9+53,fd89d7+76 */
   background: #ff7cd8; /* Old browsers */
